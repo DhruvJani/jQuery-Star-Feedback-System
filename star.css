@@ -1,0 +1,128 @@
+* {
+ padding: 0px;
+ margin: 0px;
+}
+body {
+ background-color: #f7f7f7;
+ font-size: 14px;
+ font-family: 'Montserrat', sans-serif;;
+ padding: 0px;
+ margin: 0px;
+}
+body::-webkit-scrollbar {
+ width: 8px;
+ height: 5px;
+ background-color: #bbb; /* or add it to the track */
+}
+body::-webkit-scrollbar-thumb {
+ background: #777;
+}
+#wrapper {
+ width: 100%;
+ height: auto;
+}
+a {
+ text-decoration: none;
+ color: #555;
+ transition: all 300ms;
+}
+a:hover {
+ color: #FD602D;
+}
+.center_align {
+ width: 1200px;
+ height: auto;
+ margin-left: auto;
+ margin-right: auto;
+}
+.demo {
+ padding: 100px 20px;
+ width: calc(100% - 40px);
+ text-align: center;
+}
+
+div#call_rating {
+ width: 300px;
+ padding: 20px;
+ border: 1px dashed #ccc;
+ border-radius: 7px;
+ margin-left: auto;
+ margin-right: auto;
+ text-align: left;
+ background-color: #fff;
+}
+.image {
+ margin-bottom: 10px;
+}
+.image img {
+ border-radius: 5px;
+ border: 1px solid #f1f1f1;
+}
+.rating-stars.text-center {
+ font-size: 13px;
+ padding: 5px;
+}
+textarea.edit_textarea{
+ width: calc(100% - 20px);
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ padding: 8px 10px;
+ margin-bottom: 10px;
+}
+input.red_btn {
+ width: 150px;
+ padding: 10px;
+ background-color: #4C56BA;
+ color: #fff;
+ text-transform: uppercase;
+ border: none;
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
+ border-radius: 5px;
+ cursor: pointer;
+ transition: all 300ms;
+}
+input.red_btn:hover {
+ background-color: #172080;
+}
+#footer_logo {
+	position:fixed;
+	bottom:15px;
+	right:20px;
+}
+
+/*******************************************/
+/*******************************************/
+
+/* Rating Star Widgets Style */
+.rating-stars ul {
+  list-style-type:none;
+  padding:0;
+  float: right;
+  margin-left: 10px;
+  -moz-user-select:none;
+  -webkit-user-select:none;
+}
+.rating-stars ul > li.star {
+  display:inline-block;
+  cursor: pointer;
+}
+
+/* Idle State of the stars */
+.rating-stars ul > li.star > i.fa {
+ font-size: 13px;
+ letter-spacing: 2px;
+ color: #ccc;
+ width: auto;
+}
+
+/* Hover state of the stars */
+.rating-stars ul > li.star.hover > i.fa {
+  color:#FFCC36;
+}
+
+/* Selected state of the stars */
+.rating-stars ul > li.star.selected > i.fa {
+  color:#FF912C;
+}
