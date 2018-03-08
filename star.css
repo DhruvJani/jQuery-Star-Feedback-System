@@ -68,6 +68,7 @@ textarea.edit_textarea{
  border-radius: 5px;
  padding: 8px 10px;
  margin-bottom: 10px;
+ outline: none;
 }
 input.red_btn {
  width: 150px;
@@ -90,6 +91,23 @@ input.red_btn:hover {
 	position:fixed;
 	bottom:15px;
 	right:20px;
+}
+.car-prise {
+ font-size: 13px;
+ font-weight: bold;
+ color: #51AB62;
+ float: right;
+}
+.car-name {
+ font-size: 14px;
+ font-weight: bold;
+ color: #444;
+ float: left;
+}
+.car-details {
+ width: 100%;
+ display: inline-block;
+ margin-bottom: 5px;
 }
 
 /*******************************************/
