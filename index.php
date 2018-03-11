@@ -1,21 +1,49 @@
 <?php
-
+$success = "";
+$error = "";
+if(isset($_POST['submit_review'])) {
+  $review = $_POST['review'];
+  $review = stripslashes($review);
+  $review = str_replace("'", "", $review);
+  $rating1 = (int)$_POST['rating1'];
+  $rating2 = (int)$_POST['rating2'];
+  $rating3 = (int)$_POST['rating3'];
+  if($rating1 != "0" && $rating2 != "0" && $rating3 != "0" && $review != "") {
+   $success = "Thank you for submitting your review";
+   // update database
+  } else {
+   $error = "Please rate & review car before clicking submit button";
+  }
+}
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
- <title>Star Rating System by Dhruv Jani</title>
+ <title>jQuery/PHP based Star Feedback System by Dhruv Jani</title>
  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <link href="star.css" rel="stylesheet" />
- <link rel="icon" type="image/png"  href="logo.png">
+ <link rel="icon" type="image/png"  href="http://dhruvjani.in/icon/favicon-32x32.png">
 </head>
 
 <body>
 <div id="wrapper">
  <div class="center_align">
   <div class="demo">
+
+   <?php if($success != "") { ?>
+   <div class="msgbox success">
+    <?php echo $success; ?>
+   </div>
+   <?php } ?>
+
+   <?php if($error != "") { ?>
+   <div class="msgbox error">
+    <?php echo $error; ?>
+   </div>
+   <?php } ?>
+
    <form action="" method="post">
     <input type="hidden" name="rating1" value="0">
     <input type="hidden" name="rating2" value="0">
@@ -104,7 +132,7 @@
 </div>
 
 <div id="footer_logo">
-<a href="http://dhruvjani.in" target="_new"><img src="logo.png" width="80" height="80" border="0" /></a>
+<a href="http://dhruvjani.in" target="_new"><img src="http://dhruvjani.in/icon/favicon-96x96.png" title="dhruvjani.in" width="80" height="80" border="0" /></a>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -29,6 +29,23 @@ a {
 a:hover {
  color: #FD602D;
 }
+.msgbox {
+ width: 300px;
+ padding: 20px;
+ border: 1px dashed #ccc;
+ border-radius: 7px;
+ margin-left: auto;
+ margin-right: auto;
+ text-align: center;
+ font-size: 11px;
+ margin-bottom: 20px;
+}
+.success {
+ background-color: #E2FAD6;
+}
+.error {
+ background-color: #FCE8E3;
+}
 .center_align {
  width: 1200px;
  height: auto;
@@ -36,7 +53,7 @@ a:hover {
  margin-right: auto;
 }
 .demo {
- padding: 100px 20px;
+ padding: 60px 20px;
  width: calc(100% - 40px);
  text-align: center;
 }
